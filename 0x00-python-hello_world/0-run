@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-$PYFILE=main.py
+export $PYFIL=Emain.py

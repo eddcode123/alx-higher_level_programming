@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-export $PYFIL=Emain.py
+python3 $PYFILE

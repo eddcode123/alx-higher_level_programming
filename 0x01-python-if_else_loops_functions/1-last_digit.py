@@ -8,7 +8,7 @@ if (number < 0):
 else:
     lastdigit = number % 10
 # print out the last digit
-print(f"last digit of {number} is {lastdigit}", end=" ")
+print(f"Last digit of {number} is {lastdigit}", end=" ")
 # check if the last digit is ! 0 and < 6
 if (lastdigit == 0):
     print("and is 0")

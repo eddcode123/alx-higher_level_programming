@@ -2,6 +2,7 @@
 def uniq_add(my_list=[]):
     # create a set to store unique values
     uniquevalues = set()
+    add = 0
 
     # use a nested loop to iterate and pick unique elements
     if (my_list):

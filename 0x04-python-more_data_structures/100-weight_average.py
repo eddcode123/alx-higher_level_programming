@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    mul = 0
-    div = 0
+    num = 0
+    num1 = 0
 
     # check if list is empty
     if not my_list:
         return (0)
     for item in my_list:
-        mul += item[0] * item[1]
-        div = item[1]
+        num += item[0] * item[1]
+        num1 += item[1]
 
-    return (mul / div)
+    return (num / num1)

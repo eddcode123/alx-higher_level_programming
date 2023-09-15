@@ -53,7 +53,13 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
-        """ methode to insert node in sorted ascending order
+        """Insert a new Node to the SinglyLinkedList.
+
+        The node is inserted into the list at the correct
+        ordered numerical position.
+
+        Args:
+            value (Node): The new Node to insert.
         """
         # create a new node
         new_node = Node(value)

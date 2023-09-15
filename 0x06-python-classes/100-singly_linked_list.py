@@ -78,6 +78,7 @@ class SinglyLinkedList:
         current.next_node = new_node
 
     def __str__(self):
+        """Define the print() representation of a SinglyLinkedList."""
         rtn = ""
         ptr = self.__head
 

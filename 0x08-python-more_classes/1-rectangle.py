@@ -16,21 +16,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get height of private instance
-        Returns:
-            height of the rectangle.
-        """
+        """Get height of private instance"""
         return (self.__height)
 
     @height.setter
     def height(self, value):
-        """set value to private instance height
-        Args:
-            value(int): value to update instance
-        Raises:
-            TypeError: if value is not int
-            ValueError: if value is less than 0.
-        """
+        """set value to private instance height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value < 0:
@@ -39,21 +30,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get  width of private instance
-        Returns:
-            width of rectangle.
-        """
+        """Get  width of private instance"""
         return (self.__width)
 
     @width.setter
     def width(self, value):
-        """Set value to private instance width
-        Args:
-            value(int): value to update instance
-        Raises:
-            TypeError: if value is not int
-            ValueError: if value is less than 0.
-        """
+        """Set value to private instance width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:

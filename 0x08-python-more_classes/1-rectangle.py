@@ -8,36 +8,54 @@ class Rectangle:
         """initializing a rectangle
 
         Args:
-        width (int): width of a rectangle.
-        height(int): height of a rectamgle.
+            width (int): width of a rectangle.
+            height(int): height of a rectamgle.
         """
         self.__width = width
         self.__height = height
 
     @property
     def height(self):
-        """Get height of private instance"""
+        """Get height of private instance
+        Returns:
+            height of the rectangle.
+        """
         return (self.__height)
 
     @height.setter
     def height(self, value):
-        """set value to private instance height"""
+        """set value to private instance height
+        Args:
+            value(int): value to update instance
+        Raises:
+            TypeError: if value is not int
+            ValueError: if value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif self.__height < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
     @property
     def width(self):
-        """Get  width of private instance"""
+        """Get  width of private instance
+        Returns:
+            width of rectangle.
+        """
         return (self.__width)
 
     @width.setter
     def width(self, value):
-        """Set value to private instance width"""
+        """Set value to private instance width
+        Args:
+            value(int): value to update instance
+        Raises:
+            TypeError: if value is not int
+            ValueError: if value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif self.__width < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value

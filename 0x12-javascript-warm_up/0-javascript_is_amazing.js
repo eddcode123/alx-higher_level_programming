@@ -1,6 +1,3 @@
 #!/usr/bin/node
-
-// create variable
-const myVar = 'JavaScript is amazing';
-// print value of myVar
+const myVar = 'JavaScript is amazing'
 console.log(myVar);

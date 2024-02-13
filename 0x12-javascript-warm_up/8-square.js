@@ -11,5 +11,5 @@ if (!isNaN(number) && number >= 0) {
     console.log(row); // Print the row
   }
 } else {
-  console.log('Not a number');
+  console.log('Missing size');
 }

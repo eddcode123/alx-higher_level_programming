@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+"""Add all arguments to a Python list and save them to a file."""
 import sys
 
-save_to_json = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+if __name__ == "__main__":
+    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = \
+        __import__('6-load_from_json_file').load_from_json_file
 
-# create a list of arguments excluding script name
+# create a list of arguments
 arguments = sys.argv
 
 # if arguments is 1 then make arguments a empty list
@@ -15,7 +18,7 @@ else:
     arguments = sys.argv[1:]
 
 # save list of arguments to a json file
-save_to_json(arguments, 'add_item.json')
+save_to_json_file(arguments, 'add_item.json')
 
 # load the saved json files to python object
 load_from_json_file('add_item.json')

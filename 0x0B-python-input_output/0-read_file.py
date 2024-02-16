@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def read_file(filename=""):
     # Open filename in read mode ('r') with UTF-8 encoding

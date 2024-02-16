@@ -4,7 +4,7 @@
 
 
 def read_file(filename=""):
-    # Open filename in read mode ('r') with UTF-8 encoding
+    """Print the contests of a UTF8 text file to stdout."""
     with open(filename, 'r', encoding='utf-8') as f:
         # Read and Print file contents to STDOUT
         print(f.read(), end='')

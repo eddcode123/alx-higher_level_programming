@@ -1,5 +1,6 @@
--- Script creates a new user and assigns all privileges to user
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
-
--- assign all privileges to user
-GRANT *.* TO 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
+-- a script that creates the MySQL server user user_0d_1.
+CREATE USER IF NOT EXISTS user_0d_1@localhost IDENTIFIED BY 'user_0d_1_pwd';
+GRANT ALL PRIVILEGES 
+ON *.*
+TO 'user_0d_1'@'localhost';
+FLUSH PRIVILEGES;

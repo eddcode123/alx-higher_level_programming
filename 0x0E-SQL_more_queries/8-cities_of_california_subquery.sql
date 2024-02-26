@@ -6,4 +6,4 @@ WHERE state_id = (
     FROM states
     WHERE name = 'California'
 )
-ORDER BY id IN ASC;
+ORDER BY id ASC;

@@ -20,10 +20,12 @@ if __name__ == '__main__':
     # Get cursor
     cur = db.cursor()
 
+    # Define the SQL query with string formatting
+    sql_query = 'SELECT * FROM states WHERE name = "{}" ORDER BY id ASC'.format(sys.argv[4])
+
     # Execute query
     try:
-        cur.execute('SELECT * FROM states WHERE name = "{}" \
-        ORDER BY id ASC'.format(sys.argv[4]))
+        cur.execute(sql_query)
         results = cur.fetchall()
         # Print results
         for row in results:

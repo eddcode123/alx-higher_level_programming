@@ -29,7 +29,6 @@ if __name__ == '__main__':
     try:
         cur.execute(query, (sys.argv[4],))
         cities = cur.fetchall()
-        print(cities)
         print(", ".join([city[0] for city in cities]))
 
     except MySQLdb.Error as e:

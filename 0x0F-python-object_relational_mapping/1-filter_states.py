@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" lists all states with a name starting with N from the database hbtn_0e_0_usa """
+""" Lists all states with a name starting with N from the database hbtn_0e_0_usa """
 import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    # create a connection to database
+    # Create a connection to the database
     try:
         db = MySQLdb.connect(
             host='localhost',
@@ -14,24 +14,24 @@ if __name__ == '__main__':
             port=3306
         )
     except MySQLdb.Error as e:
-        print("Error connecting to Mysql: ", e)
+        print("Error connecting to MySQL:", e)
         sys.exit(1)
 
     # Get cursor
     cur = db.cursor()
 
-    # execute query
+    # Execute query
     try:
         cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
         results = cur.fetchall()
-        # print result
+        # Print results
         for row in results:
             print(row)
     except MySQLdb.Error as e:
-        print('Query execution error: ', e)
+        print('Query execution error:', e)
         sys.exit(1)
 
-    # close cursor
+    # Close cursor
     cur.close()
-    # close connection to database
+    # Close connection to the database
     db.close()

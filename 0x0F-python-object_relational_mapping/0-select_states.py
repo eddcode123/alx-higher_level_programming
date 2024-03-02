@@ -8,7 +8,7 @@ import sys
 arguments = sys.argv[1:]
 
 # create a conection to the database
-db = MySQLdb.connect(host='localhost', user=arguments[0], passwd=arguments[1], db=arguments[2], port=3306)
+db = MySQLdb.connect(host='localhost', user=arguments[1], passwd=arguments[2], db=arguments[3], port=3306)
 # get cursor
 cur = db.cursor()
 

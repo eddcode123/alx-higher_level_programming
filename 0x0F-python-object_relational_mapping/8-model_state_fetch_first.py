@@ -24,7 +24,7 @@ if __name__ == '__main__':
     state = session.query(State).order_by(State.id).first()
 
     # print first state
-    if state is None:
+    if not state:
         print('None')
     else:
         print(f'{state.id}: {state.name}')

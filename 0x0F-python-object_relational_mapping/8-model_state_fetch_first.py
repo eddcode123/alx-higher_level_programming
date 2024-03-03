@@ -16,7 +16,7 @@ if __name__ == '__main__':
         )
 
     # create an engine
-    engine = create_engine(connection_string)
+    engine = create_engine(connection_string, pool_pre_ping=True)
     # create a session
     Session = sessionmaker(bind=engine)
     session = Session()

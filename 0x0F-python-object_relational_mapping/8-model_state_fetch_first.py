@@ -21,7 +21,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     # query to list all states
-    state = session.query(State).first()
+    state = session.query(State).order_by(State.id).first()
 
     # print first state
     if state:

@@ -1,3 +1,4 @@
+#!/usr/bin/pyhton3
 """ Define a state class and link to data base """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base

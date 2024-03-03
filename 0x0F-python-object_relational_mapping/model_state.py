@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """ Define a state class and link to data base """
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
 
-class States(Base):
+class State(Base):
     """ Represent States """
 
     __tablename__ = 'states'

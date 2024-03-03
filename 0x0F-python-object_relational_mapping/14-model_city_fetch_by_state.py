@@ -25,7 +25,7 @@ if __name__ == '__main__':
     state_city = session.query(City, State)\
         .filter(City.state_id == State.id).order_by(City.id).all()
     for city, state in state_city:
-        print(f'{state.name}: {(city.id)} {city.name}')
+        print(f'{state.name}: ({city.id}) {city.name}')
 
     # close session
     session.close()

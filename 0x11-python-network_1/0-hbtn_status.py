@@ -8,8 +8,8 @@ if __name__ == '__main__':
     url_web = "https://alx-intranet.hbtn.io/status"
     try:
         with urllib.request.urlopen(url_web) as response:
-            utf8_content = response.read().decode('utf-8')
             content = response.read()
+            utf8_content = content.decode('utf-8')
             print("Body response:")
             print("\t- type:", type(content))
             print("\t- content:", content)

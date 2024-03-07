@@ -8,14 +8,15 @@ import sys
 
 if __name__ == '__main__':
     q = sys.argv[1] if len(sys.argv) > 1 else ""
+    payload = {"q": 'letter'}
     url = 'http://0.0.0.0:5000/search_user'
-    req = requests.post(url, data={'q': q})
+
+    req = requests.post(url, data=payload)
     try:
         j_dict = req.json()
+        if j_dict:
+            print(f'[{j_dict['id']}] {j_dict['name']}')
+        else:
+            print('No result')
     except ValueError:
         print('Not a valid JSON')
-        sys.exit(1)
-    if j_dict:
-        print(f'[{j_dict['id']}] {j_dict['name']}')
-    else:
-        print('No result')

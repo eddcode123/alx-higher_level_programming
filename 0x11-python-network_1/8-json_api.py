@@ -15,7 +15,7 @@ if __name__ == '__main__':
     try:
         j_dict = req.json()
         if j_dict:
-            print(f'[{j_dict['id']}] {j_dict['name']}')
+            print(f'[{j_dict.get('id')}] {j_dict.get('name')}')
         else:
             print('No result')
     except ValueError:

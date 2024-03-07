@@ -6,17 +6,16 @@ import requests
 import sys
 
 
-if __name__ == '__main__':
-    q = sys.argv[1] if len(sys.argv) > 1 else ""
-    payload = {"q": q}
-    url = 'http://0.0.0.0:5000/search_user'
+if __name__ == "__main__":
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": letter}
 
-    req = requests.post(url, data=payload)
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
-        j_dict = req.json()
-        if j_dict:
-            print(f'[{j_dict.get('id')}] {j_dict.get('name')}')
+        response = r.json()
+        if response == {}:
+            print("No result")
         else:
-            print('No result')
+            print("[{}] {}".format(response.get("id"), response.get("name")))
     except ValueError:
-        print('Not a valid JSON')
+        print("Not a valid JSON")

@@ -15,4 +15,4 @@ if __name__ == '__main__':
     # send a post request to url
     values = {'email': email}
     req = requests.post(url, data=values)
-    print(req)
+    print(req.text)

@@ -4,8 +4,8 @@ request to the passed URL with the email as a
 parameter, and displays the body of the response
 """
 import sys
-import urllib.request
-import urllib.parse
+from urllib import request, parse
+import urllib.error
 
 
 if __name__ == '__main__':
@@ -13,12 +13,12 @@ if __name__ == '__main__':
     email = sys.argv[2]
 
     # Encode email parameter
-    data = urllib.parse.urlencode({'email': email})
+    data = parse.urlencode({'email': email})
     data = data.encode('ascii')
-    req = urllib.request.Request(url, data)
+    req = request.Request(url, data)
     # Send POST request and display response body
     try:
-        with urllib.request.urlopen(req) as response:
+        with request.urlopen(req) as response:
             content = response.read().decode('utf-8')
             print("Your email is:", content)
     except urllib.error.URLError as e:

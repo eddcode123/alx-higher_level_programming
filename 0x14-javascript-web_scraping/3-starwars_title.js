@@ -1,14 +1,11 @@
 #!/usr/bin/node
-
 const request = require('request');
-const myUrl = 'https://swapi-api.alx-tools.com/api/films/';
-const id = process.argv[2]; // Corrected to use process.argv[2] for the film ID
+const { argv } = require('process');
 
-request.get(myUrl + id + '/', (error, response, body) => {
+const BaseUrl = 'https://swapi-api.alx-tools.com/api';
+request(BaseUrl + '/films/' + argv[2], (error, response, body) => {
   if (error) {
     console.error(error);
-    return;
   }
-  const data = JSON.parse(body);
-  console.log(`Title: ${data.title}`);
+  console.log(JSON.parse(body).title);
 });

@@ -2,10 +2,6 @@
 
 const request = require('request');
 const myUrl = process.argv[2];
-request(myUrl, (err, response) => {
-    if (err){
-        console.error(err);
-        return;
-    }
+request(myUrl, (response) => {
     console.log(`code: ${response.statusCode}`)
 });
